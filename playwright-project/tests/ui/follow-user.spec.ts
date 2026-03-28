@@ -25,5 +25,5 @@ test("Verify that second user can follow first user via UI", async ({
   await homePage.open();
   await homePage.openUserFeed(user2Username);
   await homePage.expectAuthorVisible(user1Username);
-  await homePage.expectArticlePreviewVisible(slug);
+  await homePage.expectArticlePreviewVisible("to fail e2e");
 });
