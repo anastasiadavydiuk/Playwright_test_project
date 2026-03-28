@@ -65,5 +65,6 @@ jobs:
           npm run dev &
           sleep 10
 
-      - name: Run tests
+      - name: Run Playwright tests
         run: npx playwright test
+        working-directory: playwright-project
