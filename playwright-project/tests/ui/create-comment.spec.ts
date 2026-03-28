@@ -17,7 +17,7 @@ test("Verify that user can leave the comment", async ({ page, request }) => {
   await articlePage.expectCommentVisible(commentText);
 });
 
-test.skip("Verify that user can delete comment created via API", async ({
+test("Verify that user can delete comment created via API", async ({
   request,
   page,
 }) => {
