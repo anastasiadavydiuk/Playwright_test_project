@@ -6,11 +6,6 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
-    inputs:
-      branch:
-        description: "Branch to run tests from"
-        required: true
-        default: "main"
 
 jobs:
   test:
