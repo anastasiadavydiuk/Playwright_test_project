@@ -62,8 +62,11 @@ jobs:
 
       - name: Start app
         run: |
-          npm run dev &
-          sleep 10
+          npm run dev > app.log 2>&1 &
+          sleep 20
+
+      - name: Check app log
+        run: cat app.log
 
       - name: Run Playwright tests
         run: npx playwright test
