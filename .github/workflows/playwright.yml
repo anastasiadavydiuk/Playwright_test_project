@@ -25,6 +25,7 @@ jobs:
 
     env:
       PORT: 3001
+      JWT_KEY: supersecretkey_example
 
       DEV_DB_USERNAME: root
       DEV_DB_PASSWORD: root
