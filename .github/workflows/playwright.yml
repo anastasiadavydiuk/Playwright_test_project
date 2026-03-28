@@ -25,7 +25,6 @@ jobs:
 
     env:
       PORT: 3001
-      JWT_KEY: supersecretkey_example
 
       DEV_DB_USERNAME: root
       DEV_DB_PASSWORD: root
@@ -51,8 +50,6 @@ jobs:
       - name: Create databases
         run: |
           mysql -h 127.0.0.1 -u root -proot -e "CREATE DATABASE database_development;"
-          mysql -h 127.0.0.1 -u root -proot -e "CREATE DATABASE database_testing;"
-          mysql -h 127.0.0.1 -u root -proot -e "CREATE DATABASE database_production;"
 
       - name: Run migrations
         run: npm run sqlz -- db:migrate
